@@ -1,0 +1,86 @@
+# $Id: INSTALL 438 2005-07-20 12:09:50Z mhoebeke $
+
+Content
+-------
+
+I. Binary Distribution
+
+II. Source Distribution
+
+-----------------------
+
+
+I. Binary Distribution
+----------------------
+
+Requirements
+------------
+
+A system matching the one used for the compilation.
+
+For example, with a linux_i586 build you will need 
+a linux system on i586 hardware compatible processor.
+
+Installing and using the package
+--------------------------------
+
+A simple
+
+tar zxvf spatt-x.x.x_static_OS_SYSTEM.tar.gz
+
+will decompress the package. Then you can immediatly
+use the binaries or consult the man page.
+
+II. Source Distribution
+-----------------------
+
+Requirements
+------------
+
+All you need is:
+- automake/autoconf
+- a C/C++ compiler
+- a Fortran 77 compiler
+
+For your convenience, all non standard necessary
+library (argtable2, blas, lapack) have been
+included in the package
+
+Package has already been successfully compiled
+on the following hardware/software combination:
+- x86/Linux
+- Sun/Solaris
+
+Should be compiled but on the following combination
+(but have not been tested yet):
+
+- Macintosh/Mac Os X
+- x86/Windows
+
+Building the Package
+--------------------
+
+a simple
+
+	./configure
+	make
+
+would do the job
+
+Checking the package
+--------------------
+
+You can check the binaries using
+
+	make check
+
+IMPORTANT REMARK: As ldspatt uses stochastic algorithms, the ldspatt test may failed.
+If the differences are small enough (let say at least the first two digits are the same)
+then, the package could be installed anyway.
+
+Installing the package
+----------------------
+
+To install the package simple use
+
+	make install

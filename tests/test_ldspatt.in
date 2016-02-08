@@ -1,0 +1,10 @@
+#!@SH@
+ 
+DIFF=@DIFF@
+ECHO=@ECHO@
+ 
+$ECHO -n "Checking ldspatt: "
+
+../src/ldspatt hiv.fasta -l 4 -m 1 --all-words --max-pvalue 0.1 > test_result_ldspatt && $DIFF test_result_ldspatt result_ldspatt 
+
+if test $? = 0 ; then $ECHO "ok." ; else $ECHO "NOT ok!" ; exit -1; fi

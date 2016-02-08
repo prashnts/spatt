@@ -1,0 +1,10 @@
+PARSE ERROR: Argument: -n (--name)
+             Couldn't find 'mike' in allowed list.
+
+Brief USAGE: 
+   ../examples/test6  -n <homer|marge|bart|lisa|maggie> [--] [-v] [-h] <1|2
+                      |3>
+
+For complete USAGE and HELP type: 
+   ../examples/test6 --help
+

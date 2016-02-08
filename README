@@ -1,0 +1,114 @@
+# $Id: README 438 2005-07-20 12:09:50Z mhoebeke $
+
+SPatt: Statistics for Patterns
+------------------------------
+
+I - Introduction
+----------------
+
+It is a package including several tools designed to
+help to assess statistical significance of short
+patterns.
+
+Considering a pattern P, on can easily compute its
+number of occurrence Nobs(P) on a given text. The
+challenge is to determine how unusual is that observation.
+
+In order to do so, we choose to modelize the usual text
+as a random markovian source (of a chosen order and which
+parameters can either be provided by the user or estimated
+on the observed sequence). The number of occurrence of
+pattern P on this random text is therefore a random variable.
+
+The challenge is to determine the distribution of N(P) and,
+more specifically, to compute the p-value associated to the
+observation: P( N(P) > Nobs(P) ) for a pattern occurring more
+than expected (let say an over-represented pattern),
+P( N(P) < Nobs(P) ) for a pattern occurring less than expected
+(an under-represented pattern).
+
+The programs in this package propose several statistical methods
+to compute these p-values, or more specifically to compute the
+pattern statistic S defined by:
+
+S(P)=-log10 ( p-value ) if P is over-represented
+S(P)=+log10 ( p-value ) if P is under-represented
+
+Here is a short description of each of the programs:
+
+* sspatt (Simple Statistics for Patterns): this program use the
+simple (but false) approximation of the N(P) distribution
+by a binomial distribution. Computation are very fast and tests
+show that the results are also very reliable.
+
+* ldspatt (Large Deviation Statitics for Patterns): not yet included
+this program use the large deviations theory to provide asymptotic
+approximations of S(P). Results are very reliable for rare events
+(ie great value of S(P) in terms of magnitude), but have poor accurracy
+for frequent events. Computation are also quite slow due to the complexity
+increasing exponentially with the length of considered patterns
+
+* xspatt (eXact Statistics for Patterns): not yet included
+description coming soon.
+
+* gspatt (Gaussian Statistics for Patterns): not yet included
+description coming soon.
+
+II - Common conventions
+-----------------------
+
+sequence file format: only the fasta format is accepted. The file
+can contain several sequences separed by title lines. Programs will
+treat the file as a single sequence in one or several pieces.
+
+III - Detailled options
+-----------------------
+
+see man pages.
+
+IV - Examples
+-------------
+
+sspatt:
+
+sspatt ecoli.fasta -p g.tggtgg -m 2
+
+computes statistic for pattern {gatggtgg,gctggtgg,ggtggtgg,gttggtgg}
+in respect with an order 2 markov model which parameters are estimated
+on the sequence.
+
+sspatt ecoli.fasta -l 4 -m 1 --all-words
+
+computes statistics for all words of length 4 in respect with an order
+1 markov model which parameter are estimated on the sequence.
+
+sspatt ecoli.fasta -p tagctaggc -m 4 -M ecolim4.markov -S ecolim4.stationnary
+
+computes statistics for tagctaggc in respect with an order 4 markov model which
+parameters are estimated on the sequence and outputs these parameters in the
+file ecolim4.markov and output the corresponding stationnary distribution in
+the file ecolim4.stationnary.
+
+sspatt phage-lambda.fasta -p gctggtgg -m 4 -U ecolim4.markov
+
+computes statistic for gctggtgg in respect with an order 4 markov model which
+parameters are read from the file ecolim4.markov.
+
+
+VI.1 - Patches
+--------------
+Since GSL library was updated, ETIME api had to be changed.
+https://gcc.gnu.org/ml/fortran/2007-03/msg00305.html
+
+Library Path
+sudo find /usr -iname 'libgfortran*.a' | xargs shasum
+export LIBRARY_PATH=$1
+
+V - Source availability
+-----------------------
+
+If you get the file without the source distribution (for example in a binary distribution)
+please note that you can get the sources at the following adress:
+
+http://stat.genopole.cnrs.fr/spatt/
+

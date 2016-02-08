@@ -1,0 +1,276 @@
+2006-09-26 release 1.2.2
+
+* many bug fixes
+* an improved precise mode for ldstat
+
+
+2006-02-22  Gregory Nuel  <nuel@genopole.cnrs.fr>
+
+	* release: 1.2.1
+	
+	* fixed: multiple sequences are now taken into account in the
+	expected number of occurrences.
+
+	* fixed: reading markov file now works with large (e.g. size=26)
+	alphabets.
+
+	* added: aspatt program which is not functional yet.
+
+# $Id: ChangeLog 968 2006-11-20 09:57:54Z gnuel $
+
+10/10/2005 release 1.2.0
+------------------------
+* added a new transition class both used by ldstat and xstat
+* class newxstat (through fmci rather than recurrences)
+* added precise support for the sparse case in ldstat
+
+09/01/2005 release 1.1.3
+------------------------
+* added the "--zscore" option to gspatt allowing to output zscore instead of
+classical logscale statistics.
+* added the "--precise" option to ldspatt. Using it will improve reliability
+on ldstat computations (computational times grows by a factor 3).
+
+06/13/2005 release 1.1.2
+------------------------
+* corrected small bug with option "-p" for pattern of size > max_length
+in the case of xstat and gstat.
+* added a definition of INFINITY in cp.cc (for system where this could cause
+problem)
+* corrected a small bug in ldstat, sequence length was longer that necessary.
+This bug will have few effect for ld statistics computed on long sequence.
+Could be more critical on shorter sequences.
+* added support for order > 0 Markov models in gstat
+* imported three classes from MeSs project: WordFam, PSucceed, PAppearFast
+* xstat is now working for Markov model order > 0 for any pattern
+* added minor changes to make compilation easier on Solaris/Sun
+
+06/02/2005 release 1.1.1
+------------------------
+* removed arprec from the project
+* dramatically improved xstat (200 times faster)
+* fixed a bug preventing -S to works with order<=0 Markov models
+* fixed a small bug in the computation of 1.0-betai in cdf.c
+this should have very few effect (only a difference of few digits in some
+rare cases) on previously statistics computed sspatt or cpspatt
+
+05/25/2005  release 1.1
+---------------------------
+* added arpack to the package
+* moved lapack and blas to toplevel dir
+* added arpack support to markov class
+* added few fortran parameter classes
+* added LD stat with automaton for all words (ldstat.c and ldstat.h)
+* moved fortran param classes in their own sources (fortran.h fortran.cc)
+* added process and stat classes
+* created a testspatt program for new design testing
+* added "|{rc}" to pattern label when --both-strands is specified
+* changed FFLAGS to get rid of infinite loop lapack bug
+* added a sstat class derived from stat
+* changed --min-pvalue to --max-pvalue (more consistent with the function)
+* added a cpstat class
+* added a ldstat class
+* added a gstat class
+* added a xstat class
+
+02/22/2005 release pre-1.0.10
+-----------------------------
+* geometric Poisson tail now computed through a new implementation
+(newcpstat, but old one still availaible as cpstat)
+* added the legal GPL mentions to all files
+* added the nobs option to sspatt, for the moment, it is
+only working with pattern statistics (but without --all-words)
+* -n and -b can now work together
+
+02/09/2005 release 1.0.9
+------------------------
+* changed max word size limit from 13 to 30. Please note
+that O(K^L) memory is required in order to count all the
+words (K size of the alphabet, L size of the words).
+* added the --min-pvalue option to sspatt program
+* corrected a bug in xspatt. ac had a wrong index. highly
+self-overlapping exact statitistics computed before this
+correction should be considered with caution.
+* corrected a bug in xspatt. Few high magnitude negative
+statistics could be wrong in version prior to this correction.
+
+02/07/2005 release 1.0.8
+------------------------
+
+* added man pages for all programs in package
+* added the normalize option to sspatt,xspatt,ldspatt and gspatt
+* added the normalize option to cpspatt
+* added support for all markov models in cpspatt
+
+12/16/2004 release 1.0.7
+------------------------
+* bugfix: corrected a bug in cp stat computation for
+under-reprensented words with one occurrence. Old results
+for such words (only when they are overlapping ones) should
+be sligthly changed with this correction. Not too much to worry
+about.
+
+12/10/2004 release 1.0.6
+------------------------
+* added: program gspatt (only order <=0 supported atm)
+* added: a self-test for gspatt
+* Corrected a critical bug in xspatt: changed "current[x]+=sum"
+in "current[x]-=sum". exact stats computed with version of SPatt
+< 1.0.6 should be considered with extreme caution.
+
+12/09/2004 release 1.0.5
+------------------------
+* bugfix: added a "if (rank=n) done=1" test in real_explicit_arnoldi
+should get rid of the remaining rare bugs here
+* bugfix: added a "&& rank<n" in real_explicit_arnoldi
+in order to deal with rare nan produced in stationnary
+when low markov order is used (m=1 for example). Should
+also slightly speed up the computation in such cases.
+* bugfix: added a test for normalization of null vectors
+in markov.cc
+* added: tests for xspatt and cpspatt
+
+10/27/2004 release 1.0.4
+------------------------
+* cpstatt: complexity reduced to linear
+using a nice recurrence. Old method still
+available as "oldcpstat"
+* stat formats are now consistant in all
+programs
+* arprec now included in distribution
+* ldspatt: added a special treatment for
+a=0.0. In this case I=-Lambda(-inf)
+
+10/22/2004 release 1.0.3
+------------------------
+* added compound poisson support with cpspatt
+* for the moment, only non degenerate pattern
+are treated with compound Poisson approximation
+complexity is quadratic with number of occurrences
+
+10/14/2004 release 1.0.2
+------------------------
+* corrected some minor trouble with uninitialized
+values in markov contructors. Now valgrind displays
+no more error.
+* xspatt can now compute the exact stat for a given
+non degenerate pattern
+* xspatt can now compute the exact stat for a words
+of a given length
+
+10/07/2004 release 1.0.1
+------------------------
+* implicit arnoldi restarted support added
+* corrected a minor numerical bug in arnoldi
+now computation stability should be improved
+* added xspatt program. Its actual function
+is only to compute the second magnitude
+eigenvalue.
+* quicksort is now used to sort eigenvalues
+
+09/17/2004 release 1.0
+------------------------
+* the GSL (GNU Scientific Library) is now
+required for compilation.
+* ldspatt added to the package
+* added a test for ldspatt
+* removed few old binaries (useless)
+
+09/15/2004 release 0.9.1
+------------------------
+* bugfix: now sspatt should not segfault when -m
+is omitted.
+* added a statistic class. main sources are now
+much shorter and readable.
+* removed: unused progress class
+
+09/09/2004 release 0.9
+----------------------
+* corrected qcdfpoi computations for extreme
+rare events.
+
+07/13/2004 release 0.8
+----------------------
+* added a make check
+* package successfully compiled on SUN/Solaris
+* argtable2 now included in the distribution
+* bugfix: _n now set to _k when _order<=0
+* bugfix: order<=0 markov model are now properly
+taken into account in markov::dump_model
+
+06/04/2004 release 0.7
+----------------------
+* bugfix: _states now initialized to NULL
+in word constructor
+* bugfix: --all-words incompatible with no
+markov model specified. Program now prompt
+a message before exiting (should be fixed later)
+* added option -U to use Markov parameter from
+a file
+* added options -M and -S to output model and
+stationnary
+
+03/08/2004 release 0.6
+----------------------
+* cdfbin now used instead of cdfpoi
+(increased reliability on very short sequences)
+* added support for order 0 and -1 model
+(-1 for iid model with no memory)
+* added --both-strands support for --all-words
+option
+
+03/06/2004 release 0.5
+----------------------
+* added --all-words option
+* added support for small p-values
+* added p-value using simple Poisson approximation
+* first guess for stationnary now from estimation
+when it is possible
+* corrected issue with imaginary part of eigenvector
+non null when a real vector is expected
+* added basic Arnoldi support: explicit_arnoldi
+(real only)
+
+03/26/2004 release 0.4
+----------------------
+* default for length is now 8
+* added -b --both-strands option
+* dramatically improved core using
+arrays of word* instead of maps
+* dramatically improved build_dfa
+* added pattern counting
+* added pattern regex descriptor
+ex: "atg[cg]ta.|tta.[at]|atata"
+* complete rewriting of word class
+(including copy and affectation fct)
+* added a global header
+* added support for several bin
+* removed output class
+* added inline keyword when necessary
+
+03/23/2004 release 0.3
+----------------------
+* default for length is now 0
+* fixed a case sensitive bug with dfa count
+* gspatt now fully operationnal
+for word counting
+* added input/output support
+* fixed dfa counting
+* added word support
+* added dfa support
+
+03/18/2004 release 0.2
+----------------------
+* added count support
+* added explicit classical constructors
+(empty, copy) and operator (affectation)
+to all classes.
+* added sequence support
+* member data name now start with '_' 
+* added progress bar support
+* added command line basic support
+* added alphabet support
+
+02/27/2004 release 0.1
+----------------------
+* Initial release. Prog do nothing yet
