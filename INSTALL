@@ -1,86 +1,48 @@
-# $Id: INSTALL 438 2005-07-20 12:09:50Z mhoebeke $
+Spatt Installation
+==================
 
-Content
--------
+Spatt is distributed with *CMakeLists.txt* files for CMake_, the cross-platform, open-source build system.
 
-I. Binary Distribution
+For example, to compile and install **Spatt** on a Unix system:
 
-II. Source Distribution
+1. To create the *Makefiles* do:
 
------------------------
+ ::
 
+  cd spatt-<version>
+  mkdir build
+  cd build
+  cmake ..
 
-I. Binary Distribution
-----------------------
+ .. note::
 
-Requirements
-------------
+    **Spatt** requires the **Tclap** headers. If they are not installed in your system, you can specify the path where you have a local copy of them:
 
-A system matching the one used for the compilation.
+    ::
 
-For example, with a linux_i586 build you will need 
-a linux system on i586 hardware compatible processor.
+     cmake -DTCLAP_INCLUDEDIR=<path>/tclap-1.2.1/include ..
 
-Installing and using the package
---------------------------------
+ .. note::
 
-A simple
+    To compile the shared library together with **spatt** executable:
 
-tar zxvf spatt-x.x.x_static_OS_SYSTEM.tar.gz
+    ::
 
-will decompress the package. Then you can immediatly
-use the binaries or consult the man page.
+     cmake -DWITH_SHARED_LIB=ON ..
 
-II. Source Distribution
------------------------
+2. To compile do:
 
-Requirements
-------------
+ ::
 
-All you need is:
-- automake/autoconf
-- a C/C++ compiler
-- a Fortran 77 compiler
+  make
 
-For your convenience, all non standard necessary
-library (argtable2, blas, lapack) have been
-included in the package
+ Or to have a more verbose output (every compiling line):
 
-Package has already been successfully compiled
-on the following hardware/software combination:
-- x86/Linux
-- Sun/Solaris
+ ::
 
-Should be compiled but on the following combination
-(but have not been tested yet):
+  VERBOSE=1 make
 
-- Macintosh/Mac Os X
-- x86/Windows
+3. To install the library and the executable, do ``make install``.
 
-Building the Package
---------------------
+.. _CMake: http://www.cmake.org
 
-a simple
-
-	./configure
-	make
-
-would do the job
-
-Checking the package
---------------------
-
-You can check the binaries using
-
-	make check
-
-IMPORTANT REMARK: As ldspatt uses stochastic algorithms, the ldspatt test may failed.
-If the differences are small enough (let say at least the first two digits are the same)
-then, the package could be installed anyway.
-
-Installing the package
-----------------------
-
-To install the package simple use
-
-	make install

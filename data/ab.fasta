@@ -1,0 +1,6 @@
+> seq 1
+abbababbbababba
+> seq 2
+babbabbababbbbbabbabababbbbbababba
+> seq 3
+abbabbbb

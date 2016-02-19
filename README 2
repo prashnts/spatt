@@ -1,0 +1,55 @@
+SPatt 2.0 (Statistics for Patterns)
+***********************************
+
+http://stat.genopole.cnrs.fr/spatt
+
+SPatt is a command-line program dedicated to the study of pattern occurrences in Markovian sequences. SPatt uses efficient automata (DFA) to treat any complex pattern and produce p-values with a wide range of statistical methods: from exact ones (FMCI, waiting times) to asymptotic approximations (Gaussian, binomial, Poisson, large deviations).
+
+The aim of SPatt is to provide higly efficient state-of-the-art implementation for most (if not all) practical approaches to patternin random sequences.
+
+Here is a couple of example of command line using SPatt:
+
+$ spatt -a ab -p "aba.(0-3)baa" -m -1 --dfa dfa.dot
+
+compute the DFA corresponding to the pattern "aba.(0-3)baa" (in the Graphviz's dot format) and output the corresponding PMC in the file "pmc.sci".
+
+$ dot -Grankdir=LR -Nfontsize=40 -Efontsize=40 -Tps dfa.dot -o dfa.eps && gv dfa.eps
+
+will let you see a graphical representation of the DFA (note that you need to get the Graphviz package - http://graphviz.org - in order to do this).
+
+$ ./src/spatt -a ab -p "aba.(0-3)baa" -m -1 -S data/ab1000.fasta
+distribution:
+P(N=0)=1.451793e-24
+P(N=1)=8.311068e-23
+[output truncated]
+P(N=39)=8.389673e-03
+P(N>=40)=9.733052e-01
+pattern=aba.(0-3)baa    Nobs=39 P(N<=Nobs)=2.669477e-02
+
+gives the exact distribution of the pattern
+
+$ spatt -a ab -p "aba.(0-3)baa" -m -1 -S data/ab1000.fasta --repartition
+16      6.137695e-01    1
+51      1.918259e-01    1
+66      3.837891e-01    1
+101     1.918259e-01    1
+116     3.837891e-01    1
+[output truncated]
+951     1.918259e-01    1
+966     3.837891e-01    1
+1000    1.918259e-01    0
+
+gives the occurrence positions and associate a waiting time p-value to each observation.
+
+$ spatt -a ab -p "aba.(0-3)baa" -m -1 -S data/ab1000.fasta --gaussian
+pattern=aba.(0-3)baa    Nobs=39 mean=52.402344  sd=6.872593     z-score=-1.950115       P(N<=Nobs)=2.558123e-02
+
+performs a Gaussian approximation.
+
+Please note that it is possible to use order m>=0 Markov model but, unlike SPatt branch 1.x, the parameter must be provided through the "-M" option. If you want to use parameter estimated over a sequence, the simplest way to do this is to use SPatt banch 1.x to perform the estimation.
+
+Here is an example: DNA pattern "g.tggtgg.(0-12)g.tggtgg" on Escherichia coli K12 complete genome
+
+$ sspatt U00096.fna -m 3 -M tmp.markov
+$ spatt -a acgt -p "g.tggtgg.(0-20)g.tggtgg" -m 3 -M tmp.markov -S U00096.fna --gaussian --over
+pattern=g.tggtgg.(0-20)g.tggtgg Nobs=14 mean=2.173635   sd=1.510378     z-score=7.830070

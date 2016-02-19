@@ -1,0 +1,8 @@
+# file produced by spatt 1.2.0
+# Markov model parameters
+# alphabet = {acgt:tgca}
+# order = 0
+# number of lines = 1
+# number of parameters = 4
+0.2461913326	0.2542308288	0.2536578878	0.2459199508	
+# end of file

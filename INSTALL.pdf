@@ -1,0 +1,490 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 4 0 R
+ /F4 6 0 R
+ /F5 7 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F3': class PDFType1Font 
+4 0 obj
+% Font Helvetica-Oblique
+<< /BaseFont /Helvetica-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Annot.NUMBER1': class PDFDictionary 
+5 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://www.cmake.org) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 271.6529
+ 719.7736
+ 303.3229
+ 731.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'F4': class PDFType1Font 
+6 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F5': class PDFType1Font 
+7 0 obj
+% Font Helvetica-BoldOblique
+<< /BaseFont /Helvetica-BoldOblique
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page1': class PDFPage 
+8 0 obj
+% Page dictionary
+<< /Annots [ 5 0 R ]
+ /Contents 12 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 11 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R9': class PDFCatalog 
+9 0 obj
+% Document Root
+<< /Outlines 13 0 R
+ /PageLabels 14 0 R
+ /PageMode /UseNone
+ /Pages 11 0 R
+ /Type /Catalog >>
+endobj
+% 'R10': class PDFInfo 
+10 0 obj
+<< /Author ()
+ /CreationDate (D:20111205185424-01'00')
+ /Creator (\(unspecified\))
+ /Keywords ()
+ /Producer (ReportLab PDF Library - www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (Spatt Installation) >>
+endobj
+% 'R11': class PDFPages 
+11 0 obj
+% page tree
+<< /Count 1
+ /Kids [ 8 0 R ]
+ /Type /Pages >>
+endobj
+% 'R12': class PDFStream 
+12 0 obj
+% page stream
+<< /Length 5234 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+BT 1 0 0 1 0 4 Tm 154.3749 0 Td 24 TL /F2 20 Tf 0 0 0 rg (Spatt Installation) Tj T* -154.3749 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 719.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Spatt is distributed with ) Tj /F3 10 Tf (CMakeLists.txt ) Tj /F1 10 Tf (files for ) Tj 0 0 .501961 rg (CMake) Tj 0 0 0 rg (, the cross-platform, open-source build system.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 701.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (For example, to compile and install ) Tj /F2 10 Tf (Spatt ) Tj /F1 10 Tf (on a Unix system:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.0236 cm
+Q
+q
+1 0 0 1 62.69291 695.0236 cm
+Q
+q
+1 0 0 1 62.69291 683.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (1.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (To create the ) Tj /F3 10 Tf (Makefiles ) Tj /F1 10 Tf (do:) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 683.0236 cm
+Q
+q
+1 0 0 1 62.69291 677.0236 cm
+Q
+q
+1 0 0 1 62.69291 351.4236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 264.4 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 448.6898 60 re B*
+Q
+q
+BT 1 0 0 1 0 38 Tm 12 TL /F4 10 Tf 0 0 0 rg (cd spatt-) Tj (<) Tj (version) Tj (>) Tj  T* (mkdir build) Tj T* (cd build) Tj T* (cmake ..) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20 244.4 cm
+Q
+q
+1 0 0 1 20 128.2 cm
+.960784 .960784 .862745 rg
+n 0 116.2 449.8898 -116.2 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 90.2 Tm  T* ET
+q
+1 0 0 1 16 85.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F5 12.5 Tf 15 TL (Note) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 49.2 cm
+q
+BT 1 0 0 1 0 14 Tm .30811 Tw 12 TL /F2 10 Tf 0 0 0 rg (Spatt ) Tj /F1 10 Tf (requires the ) Tj /F2 10 Tf (Tclap ) Tj /F1 10 Tf (headers. If they are not installed in your system, you can specify the) Tj T* 0 Tw (path where you have a local copy of them:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 16 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 416.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F4 10 Tf 0 0 0 rg (cmake -DTCLAP_INCLUDEDIR=) Tj (<) Tj (path) Tj (>) Tj (/tclap-1.2.1/include ..) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 116.2 m 449.8898 116.2 l S
+n 0 0 m 449.8898 0 l S
+n 0 0 m 0 116.2 l S
+n 449.8898 0 m 449.8898 116.2 l S
+Q
+Q
+q
+1 0 0 1 20 122.2 cm
+Q
+q
+1 0 0 1 20 110.2 cm
+Q
+q
+1 0 0 1 20 6 cm
+.960784 .960784 .862745 rg
+n 0 104.2 449.8898 -104.2 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 78.2 Tm  T* ET
+q
+1 0 0 1 16 73.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F5 12.5 Tf 15 TL (Note) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 49.2 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (To compile the shared library together with ) Tj /F2 10 Tf (spatt ) Tj /F1 10 Tf (executable:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 16 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 416.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (cmake -DWITH_SHARED_LIB=ON ..) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 104.2 m 449.8898 104.2 l S
+n 0 0 m 449.8898 0 l S
+n 0 0 m 0 104.2 l S
+n 449.8898 0 m 449.8898 104.2 l S
+Q
+Q
+q
+1 0 0 1 20 0 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 351.4236 cm
+Q
+q
+1 0 0 1 62.69291 345.4236 cm
+Q
+q
+1 0 0 1 62.69291 345.4236 cm
+Q
+q
+1 0 0 1 62.69291 333.4236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (2.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (To compile do:) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 333.4236 cm
+Q
+q
+1 0 0 1 62.69291 327.4236 cm
+Q
+q
+1 0 0 1 62.69291 243.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 59.2 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 448.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (make) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20 33.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Or to have a more verbose output \(every compiling line\):) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 448.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (VERBOSE=1 make) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 243.0236 cm
+Q
+q
+1 0 0 1 62.69291 237.0236 cm
+Q
+q
+1 0 0 1 62.69291 237.0236 cm
+Q
+q
+1 0 0 1 62.69291 225.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (3.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (To install the library and the executable, do ) Tj /F4 10 Tf (make install) Tj /F1 10 Tf (.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 225.0236 cm
+Q
+ 
+endstream
+endobj
+% 'R13': class PDFOutlines 
+13 0 obj
+<< /Count 0
+ /Type /Outlines >>
+endobj
+% 'R14': class PDFPageLabels 
+14 0 obj
+% Document Root
+<< /Nums [ 0
+ 15 0 R ] >>
+endobj
+% 'R15': class PDFPageLabel 
+15 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+xref
+0 16
+0000000000 65535 f
+0000000113 00000 n
+0000000257 00000 n
+0000000422 00000 n
+0000000597 00000 n
+0000000790 00000 n
+0000001016 00000 n
+0000001177 00000 n
+0000001364 00000 n
+0000001663 00000 n
+0000001821 00000 n
+0000002084 00000 n
+0000002191 00000 n
+0000007526 00000 n
+0000007609 00000 n
+0000007702 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(\033|i\263\244\374\014z\030\361U\333\351\377d\350) (\033|i\263\244\374\014z\030\361U\333\351\377d\350)] 
+
+ /Info 10 0 R
+ /Root 9 0 R
+ /Size 16 >>
+startxref
+7749
+%%EOF

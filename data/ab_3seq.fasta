@@ -1,0 +1,6 @@
+>seq 1
+aaaab
+> seq 2
+abaaaaaaaa
+> seq 3
+abaaaaaaaaaaaab

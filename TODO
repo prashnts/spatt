@@ -1,38 +1,18 @@
-# $Id: TODO 616 2006-01-05 09:05:59Z gnuel $
+* General:
+  - add Markov estimation support
+  - add lapack/arpack code and interface
+  - import some gsl source code (Brent, Chebyshev)
+  - import some R source code (pnorm, ppois, etc ...)
+  - add large deviation support
+  - add binomial support
+  - add compound Poisson support
 
-TODO list
----------
-* add fast_log_pcpoi and fast_log_qcpoi 
-* new cp function could fail when n=0 is supplied
-* add reading from standard input in order to use spatt with pipe
-* add a progression bar for long computations (ex: xspatt)
-* rewrite the transition class (to have a better sparse structure of matrices)
-* get rid of "natt" for expected number of occurrences
-* support for extreme pvalues using smart factorizations in oldxstat
-* change rank evaluation to something smarter in gstat
-* change serie convergence to something smarter in oldxstat
-* replace the bracketing function by the one from the gsl
-* incorporate the gsl sources needed in the distribution
-* remove gsl_cdf.h from cdf.h (just have to replace call to gsl_cdfnor
-by call to erf function from the math lib)
-* add more tests (normalize, nobs, patterns, etc ...)
-* compute _ell0 using cpstat in xstat (_tail_sum case)
-* replace zgeev by dgeev in markov.cc and then remove zgeev.f (and unused dependancies
-from the project)
-* add an option to output e-value instead of p-value when multi-test are
-performed
-* use map (may be with a pooled memory allocator) to work with
-all-words of fixed length L when L > 12. could be useful along
-with the "-min-freq 1" option to limit dramatically the number of
-word to process.
-* add shuffle option in gspatt
-* count the number of sequence in the fasta file in order to take it
-into account for the effective length : n-nseq*(h-1) instead of the
-usual n-h+1
-* degenerate pattern support must be added to cpspatt (tough but doable)
-* twisted matrix support must be added to ldspatt
-* output count in a file
-(using grep pattern helping to get counts for
-a given length)
-* add option for output format and p-value scaling
-(normal, log scale, normalized, gaussian scale)
+* Class dfa:
+  - build a minimal dfa from a simple word
+  - build a non-ambiguous dfa from a simple word (non renewal only)
+
+* Class xstat/xwaiting:
+  - improve notations
+  - avoid clumsy structures
+  - use map instead of vector in xwaiting to lower memory complexity
+  - improve outputs

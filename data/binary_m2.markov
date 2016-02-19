@@ -1,0 +1,11 @@
+# file produced by spatt 1.2.2
+# Markov model parameters
+# alphabet = {ab}
+# order = 2
+# number of lines = 4
+# number of parameters = 8
+1.0000000000	0.0000000000	
+0.0000000000	0.0000000000	
+0.0000000000	0.0000000000	
+0.0000000000	0.0000000000	
+# end of file
